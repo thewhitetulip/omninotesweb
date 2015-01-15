@@ -1,0 +1,199 @@
+  /*
+
+  omninotesweb main stylesheet
+  =============
+
+  Author:  Suraj Patil
+  Updated: January 13, 2014
+  Notes:	 omninotesweb
+
+  */
+
+
+/*--------------------------------------
+      Layout
+-------------------------------------- */
+
+#mainContent{
+  margin-top:60px;
+}
+
+/*--------------------------------------
+      Typography
+-------------------------------------- */
+
+
+/*--------------------------------------
+      Navbar
+  -------------------------------------- */
+  #mainHeader{
+   background-color: #3f51b5;
+   border-radius:0px;
+
+  }
+
+
+  #mainHeader h3{
+   text-align:right;
+   font-size:25px;
+   color:white;
+
+  }
+
+  .btn-action{
+   background-color: #3f51b5;
+  }
+
+  #icons{
+  text-align:right;
+  padding-top:17px;
+  }
+
+  .col-sm-6 .glyphicon{
+  color:white;
+
+  }
+
+  .col-sm-6 .glyphicon:hover{
+  color:black;
+  }
+
+  .list-group-item-heading{
+    font-size:15px;
+  }
+
+/*--------------------------------------
+    NotesFeed
+-------------------------------------- */
+  .note-lg{
+    height:auto;
+  }
+
+  .note-md{
+    height:auto;
+  }
+
+  .note-sm{
+    height:auto;
+  }
+
+  .panel{
+    box-shadow:0px 1px 0px #CFCFCF;
+  }
+  .panel .btn i,.btn span{
+    color:#666666;
+  }
+
+  .panel .panel-heading {
+    background-color:#ffffff;
+    font-weight:700;
+    font-size:16px;
+    color:#262626;
+    border-color:#ffffff;
+    margin-bottom:0px;
+
+  }
+  .panel .panel-heading a {
+    font-weight:400;
+    font-size:11px;
+  }
+  .panel .panel-default {
+    border-color:#cccccc;
+  }
+  .panel .panel-thumbnail {
+    padding:0;
+  }
+  .panel .img-circle {
+    width:50px;
+    height:50px;
+  }
+
+
+/*--------------------------------------
+    Navigation drawer
+-------------------------------------- */
+
+  .list-group-item{
+      border:none;
+  }
+
+  body{
+    max-width:97%;
+  }
+
+  .nav-item{
+    padding-left: 10px;
+  }
+
+#navigationDrawer{
+  postion:fixed;
+}
+  #navigationDrawer h4{
+    font-size:14px;
+
+  }
+
+
+
+  /* --------------------------------------
+  Global Styles
+  -------------------------------------- */
+  body{
+  width:100%;
+  }
+
+  .main-content{
+  color:black;
+  }
+  /* --------------------------------------
+  Media Queries
+  -------------------------------------- */
+
+  /* Portrait & landscape phone */
+  @media (max-width: 480px) {
+    body{
+      margin-top:105px;
+    }
+
+  #icons{
+  text-align:center;
+  padding:0;
+  }
+
+  .col-sm-3 #hidden{
+  height:0;
+  }
+
+  #mainHeader h3{
+  padding:0px;
+  text-align:center;
+  }
+
+
+  }
+
+  /* Landscape phone to portrait tablet */
+  @media (max-width: 768px) {
+  #icons{
+  text-align:center;
+  padding:0;
+  }
+
+  body{
+    margin-top:105px;
+  }
+
+
+  #mainHeader h3{
+  padding:0px;
+  text-align:center;
+  }
+
+
+  }
+
+  /* Large desktop */
+  @media (min-width: 1200px) {
+  }
+
+  }
