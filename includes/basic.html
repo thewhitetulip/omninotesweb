@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title>jQuery Sonatra Sidebar Basic Demo</title>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="../css/sidebar.css" rel="stylesheet">
+    <link href="../css/sidebar-bootstrap.css" rel="stylesheet">
+    <style>
+        html {
+            -ms-overflow-style: scrollbar;
+        }
+    </style>
+</head>
+
+<body>
+<!-- NAVBAR -->
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">jQuery Sonatra Sidebar Basic Demo</a>
+        </div>
+    </div>
+</nav>
+
+<!-- SIDEBAR -->
+<div data-sidebar="true" class="sidebar-trigger">
+    <a class="sidebar-toggle" href="#">
+        <span class="sr-only">Sidebar toggle</span>
+        <i class="fa fa-sidebar-toggle"></i>
+    </a>
+
+    <div class="sidebar-wrapper sidebar-default">
+        <div class="sidebar-scroller">
+            <ul class="sidebar-menu">
+                <li class="sidebar-group"><span>Header 1</span>
+                    <ul class="sidebar-group-menu">
+                        <li class="sidebar-item"><a href="#">Item 1</a></li>
+                        <li class="sidebar-item"><a href="#" class="active">Item 2</a></li>
+                        <li class="sidebar-item"><a href="#">Item 3</a></li>
+                        <li class="sidebar-item"><a href="#">Item 4</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-group"><span>Header 2</span>
+                    <ul class="sidebar-group-menu">
+                        <li class="sidebar-item"><a href="#">Item 5</a></li>
+                        <li class="sidebar-item"><a href="#">Item 6</a></li>
+                        <li class="sidebar-item"><a href="#">Item 7</a></li>
+                        <li class="sidebar-item"><a href="#">Item 8</a></li>
+                        <li class="sidebar-item"><a href="#">Item 9</a></li>
+                        <li class="sidebar-item"><a href="#">Item 10</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <p>This is a paragraph.</p>
+        </div>
+    </div>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../js/hammer.min.js"></script>
+<script src="../js/sidebar.js"></script>
+
+</body>
+</html>
