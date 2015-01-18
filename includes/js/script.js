@@ -9,8 +9,5 @@ Updated: January 2015
 */
 
 $(document).ready(function(){
-  $("#note123").click(function(){
-    $(this).fadeOut();
-
-  });
+  
 });

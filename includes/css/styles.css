@@ -64,21 +64,35 @@
     background-color: white;
     margin-bottom: 4px;
   }
-  
 
+
+.hidden{
+  display:none;
+}
+
+.panel-footer{
+    background-color: white;
+    border-top:0px;
+}
+
+.dropdown-menu{
+  margin-top:-18px;
+  margin-right:18px;
+  min-width:100px;
+}
 /*--------------------------------------
     NotesFeed
 -------------------------------------- */
   .note-lg{
-    height:auto;
+    height:360px;
   }
 
   .note-md{
-    height:auto;
+    height:240px;
   }
 
   .note-sm{
-    height:auto;
+    height:120px;
   }
 
   .panel{
@@ -106,13 +120,7 @@
   .panel .panel-default {
     border-color:#cccccc;
   }
-  .panel .panel-thumbnail {
-    padding:0;
-  }
-  .panel .img-circle {
-    width:50px;
-    height:50px;
-  }
+
 
 
 /*--------------------------------------
@@ -214,6 +222,9 @@
   text-align:center;
   }
 
+  .note-md{
+    height:140px;
+  }
 
   }
 
