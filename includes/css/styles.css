@@ -15,7 +15,9 @@
 -------------------------------------- */
 
 
-
+.center{
+  text-align:center;
+}
 
 /*--------------------------------------
       Typography
@@ -92,12 +94,20 @@
   }
 
   .note-sm{
-    height:120px;
+    height:140px;
+  }
+
+  .note-sm .panel-body{
+    height:100px;
+  }
+
+  .note-sm .panel-body{
+      height:40px;
   }
 
   .panel{
     box-shadow:0px 1px 0px #CFCFCF;
-    border-radius:0 0 2px 2px;
+    border-radius:0 0 4px 4px;
 
   }
   .panel .btn i,.btn span{
@@ -193,17 +203,18 @@
   padding:0;
   }
 
-  .col-sm-4 #hidden{
-  height:0;
-  }
-
   .mainHeader h3{
   padding:0px;
   text-align:center;
   }
 
 
+  .note-sm{
+    height:120px;
   }
+
+  }
+
 
   /* Landscape phone to portrait tablet */
   @media (max-width: 768px) {
@@ -222,14 +233,15 @@
   text-align:center;
   }
 
-  .note-md{
-    height:140px;
+  .note-lg{
+    height:360px;
+    /*change later*/
   }
 
   }
+
+
 
   /* Large desktop */
   @media (min-width: 1200px) {
-  }
-
   }
