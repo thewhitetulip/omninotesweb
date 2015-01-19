@@ -34,6 +34,7 @@
 			</div>
 
 			<div  id="icons">
+				<button class="btn btn-action glyphicon glyphicon-plus"  type="button" class="btn btn-primary" data-toggle="modal" href="#addNoteModal"></button>
 				<button class="btn btn-action glyphicon glyphicon-search "></button>
 				<button class="btn btn-action glyphicon glyphicon-sort"></button>
 				<button class="btn btn-action glyphicon glyphicon-refresh"></button>
@@ -93,6 +94,34 @@
 
 		<!--end mainHeader -->
 
+		<!-- Add note modal -->
+		<div class="modal fade " id="addNoteModal" tabindex="-1" role="dialog" aria-labelledby="newNoteLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="newNoteLabel"><span class="glyphicon glyphicon-pencil"></span>  New Note</h4>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group">
+								<!-- <label for="note-title" class="control-label">Title:</label> -->
+								<input type="text" class="form-control" id="note-title" placeholder="Title" style="border:none;border-bottom:1px solid gray; box-shadow:none;">
+							</div>
+							<div class="form-group">
+								<!-- <label for="note-content" class="control-label">Content:</label> -->
+								<textarea class="form-control" id="note-content" placeholder="Content" rows="20" style="border:none;border-bottom:1px solid gray; box-shadow:none;"></textarea>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- modal for change log -->
 		<div class="modal fade" id="changeLogModal">
 			<div class="modal-dialog">
@@ -107,6 +136,7 @@
 							<li>Now you can delete note from the UI</li>
 							<li>Added badges, improved navigation drawer and hashtags</li>
 							<li>Notes now open in a modal</li>
+							<li>Add note modal added, yet to add actual notes in the page</li>
 
 							<h1 class="lead">18 Jan 2015</h1>
 							<li>Added changelog dialog to track changes</li>
@@ -125,7 +155,7 @@
 		</div>
 
 		<!-- modal for change log -->
-		<div class="modal fade" id="editNoteModal">
+		<div class="modal fade" id="openNoteModal">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -169,8 +199,9 @@
 																						</p>
 																			    </div>
 																						<div class="dropdown pull-right">
-																							<span class="edit-note" href="#editNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-resize-full" ></span></span>
-																							<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;">
+																							<span class="edit-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-edit" ></span></span>
+																							<span class="open-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-resize-full" ></span></span>
+																							<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;margin-left:10px; margin-right:10px;">
 																								<span class="glyphicon glyphicon-th"></span>
 																							</span>
 																							<ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
@@ -211,7 +242,9 @@
 																				</p>
 																			</div>
 																			<div class="dropdown pull-right">
-																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;">
+																				<span class="edit-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-edit" ></span></span>
+																				<span class="open-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-resize-full" ></span></span>
+																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;margin-left:10px; margin-right:10px;">
 																					<span class="glyphicon glyphicon-th"></span>
 																				</span>
 																				<ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
@@ -238,8 +271,9 @@
 																				</p>
 																			</div>
 																			<div class="dropdown pull-right">
-																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;">
-																					<span class="glyphicon glyphicon-th"></span>
+																				<span class="edit-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-edit" ></span></span>
+																				<span class="open-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-resize-full" ></span></span>
+																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;margin-left:10px; margin-right:10px;">																					<span class="glyphicon glyphicon-th"></span>
 																				</span>
 																				<ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
 																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-time"></span>  Reminder</a></li>
@@ -265,8 +299,9 @@
 																				</p>
 																			</div>
 																			<div class="dropdown pull-right">
-																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;">
-																					<span class="glyphicon glyphicon-th"></span>
+																				<span class="edit-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-edit" ></span></span>
+																				<span class="open-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-resize-full" ></span></span>
+																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;margin-left:10px; margin-right:10px;">																					<span class="glyphicon glyphicon-th"></span>
 																				</span>
 																				<ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
 																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-time"></span>  Reminder</a></li>
@@ -291,7 +326,9 @@
 																				</p>
 																			</div>
 																			<div class="dropdown pull-right">
-																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;">
+																				<span class="edit-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-edit" ></span></span>
+																				<span class="open-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-resize-full" ></span></span>
+																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;margin-left:10px; margin-right:10px;">
 																					<span class="glyphicon glyphicon-th"></span>
 																				</span>
 																				<ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
@@ -317,7 +354,9 @@
 																				</p>
 																			</div>
 																			<div class="dropdown pull-right">
-																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;">
+																				<span class="edit-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-edit" ></span></span>
+																				<span class="open-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-resize-full" ></span></span>
+																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;margin-left:10px; margin-right:10px;">
 																					<span class="glyphicon glyphicon-th"></span>
 																				</span>
 																				<ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
@@ -343,7 +382,9 @@
 																				</p>
 																			</div>
 																			<div class="dropdown pull-right">
-																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;">
+																				<span class="edit-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-edit" ></span></span>
+																				<span class="open-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-resize-full" ></span></span>
+																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;margin-left:10px; margin-right:10px;">
 																					<span class="glyphicon glyphicon-th"></span>
 																				</span>
 																				<ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
@@ -389,8 +430,9 @@
 																				</p>
 																			</div>
 																			<div class="dropdown pull-right">
-																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;">
-																					<span class="glyphicon glyphicon-th"></span>
+																				<span class="edit-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-edit" ></span></span>
+																				<span class="open-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-resize-full" ></span></span>
+																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;margin-left:10px; margin-right:10px;">																					<span class="glyphicon glyphicon-th"></span>
 																				</span>
 																				<ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
 																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-time"></span>  Reminder</a></li>
@@ -415,116 +457,9 @@
 																				</p>
 																			</div>
 																			<div class="dropdown pull-right">
-																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;">
-																					<span class="glyphicon glyphicon-th"></span>
-																				</span>
-																				<ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-time"></span>  Reminder</a></li>
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-share"></span>  Share</a></li>
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-lock"></span> Mask</a></li>
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-inbox"></span>  Archive</a></li>
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-trash"></span>  Delete</a></li>
-																				</ul>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="col-md-4 col-sm-4 ">
-																	<div class="panel note-sm">
-																		<div class="panel-heading"> The one about Person<button class="close note-close"> &times;</button> </div>
-																		<hr style="margin:0 0 3px;">
-																		<div class="panel-body">Set out to correct the world's wrongs, and you would almost certainly wind up adding to them</div>
-																		<div  class="panel-footer" >
-																			<div class=" pull-left" >
-																				<p>
-																					<span class="glyphicon glyphicon-time">10:30pm</span>
-																				</p>
-																			</div>
-																			<div class="dropdown pull-right">
-																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;">
-																					<span class="glyphicon glyphicon-th"></span>
-																				</span>
-																				<ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-time"></span>  Reminder</a></li>
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-share"></span>  Share</a></li>
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-lock"></span> Mask</a></li>
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-inbox"></span>  Archive</a></li>
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-trash"></span>  Delete</a></li>
-																				</ul>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="col-md-4 col-sm-4 ">
-																	<div class="panel note-sm">
-																		<div class="panel-heading"> The one about Person <button class="close note-close"> &times;</button></div>
-																		<hr style="margin:0 0 3px;">
-																		<div class="panel-body">Set out to correct the world's wrongs, and you would almost certainly wind up adding to them</div>
-																		<div  class="panel-footer" >
-																			<div class=" pull-left" >
-																				<p>
-																					<span class="glyphicon glyphicon-time">10:30pm</span>
-																				</p>
-																			</div>
-																			<div class="dropdown pull-right">
-																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;">
-																					<span class="glyphicon glyphicon-th"></span>
-																				</span>
-																				<ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-time"></span>  Reminder</a></li>
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-share"></span>  Share</a></li>
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-lock"></span> Mask</a></li>
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-inbox"></span>  Archive</a></li>
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-trash"></span>  Delete</a></li>
-																				</ul>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="col-md-4 col-sm-4 ">
-																	<div class="panel note-sm">
-																		<div class="panel-heading"> The one about Person <button class="close note-close"> &times;</button></div>
-																		<hr style="margin:0 0 3px;">
-																		<div class="panel-body">Set out to correct the world's wrongs, and you would almost certainly wind up adding to them</div>
-																		<div  class="panel-footer" >
-																			<div class=" pull-left" >
-																				<p>
-																					<span class="glyphicon glyphicon-time">10:30pm</span>
-																				</p>
-																			</div>
-																			<div class="dropdown pull-right">
-																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;">
-																					<span class="glyphicon glyphicon-th"></span>
-																				</span>
-																				<ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-time"></span>  Reminder</a></li>
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-share"></span>  Share</a></li>
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-lock"></span> Mask</a></li>
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-inbox"></span>  Archive</a></li>
-																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-trash"></span>  Delete</a></li>
-																				</ul>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="col-md-4 col-sm-4 ">
-																	<div class="panel note-sm">
-																		<div class="panel-heading"> The one about Person <button class="close note-close"> &times;</button></div>
-																		<hr style="margin:0 0 3px;">
-																		<div class="panel-body">Set out to correct the world's wrongs, and you would almost certainly wind up adding to them</div>
-																		<div  class="panel-footer" >
-																			<div class=" pull-left" >
-																				<p>
-																					<span class="glyphicon glyphicon-time">10:30pm</span>
-																				</p>
-																			</div>
-																			<div class="dropdown pull-right">
-																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;">
-																					<span class="glyphicon glyphicon-th"></span>
+																				<span class="edit-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-edit" ></span></span>
+																				<span class="open-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-resize-full" ></span></span>
+																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;margin-left:10px; margin-right:10px;">																					<span class="glyphicon glyphicon-th"></span>
 																				</span>
 																				<ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
 																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-time"></span>  Reminder</a></li>
@@ -550,6 +485,120 @@
 																				</p>
 																			</div>
 																			<div class="dropdown pull-right">
+																				<span class="edit-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-edit" ></span></span>
+																				<span class="open-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-resize-full" ></span></span>
+																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;margin-left:10px; margin-right:10px;">																					<span class="glyphicon glyphicon-th"></span>
+																				</span>
+																				<ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-time"></span>  Reminder</a></li>
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-share"></span>  Share</a></li>
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-lock"></span> Mask</a></li>
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-inbox"></span>  Archive</a></li>
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-trash"></span>  Delete</a></li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+
+																<div class="col-md-4 col-sm-4 ">
+																	<div class="panel note-sm">
+																		<div class="panel-heading"> The one about Person <button class="close note-close"> &times;</button></div>
+																		<hr style="margin:0 0 3px;">
+																		<div class="panel-body">Set out to correct the world's wrongs, and you would almost certainly wind up adding to them</div>
+																		<div  class="panel-footer" >
+																			<div class=" pull-left" >
+																				<p>
+																					<span class="glyphicon glyphicon-time">10:30pm</span>
+																				</p>
+																			</div>
+																			<div class="dropdown pull-right">
+																				<span class="edit-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-edit" ></span></span>
+																				<span class="open-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-resize-full" ></span></span>
+																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;margin-left:10px; margin-right:10px;">																					<span class="glyphicon glyphicon-th"></span>
+																				</span>
+																				<ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-time"></span>  Reminder</a></li>
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-share"></span>  Share</a></li>
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-lock"></span> Mask</a></li>
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-inbox"></span>  Archive</a></li>
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-trash"></span>  Delete</a></li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+
+																<div class="col-md-4 col-sm-4 ">
+																	<div class="panel note-sm">
+																		<div class="panel-heading"> The one about Person <button class="close note-close"> &times;</button></div>
+																		<hr style="margin:0 0 3px;">
+																		<div class="panel-body">Set out to correct the world's wrongs, and you would almost certainly wind up adding to them</div>
+																		<div  class="panel-footer" >
+																			<div class=" pull-left" >
+																				<p>
+																					<span class="glyphicon glyphicon-time">10:30pm</span>
+																				</p>
+																			</div>
+																			<div class="dropdown pull-right">
+																				<span class="edit-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-edit" ></span></span>
+																				<span class="open-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-resize-full" ></span></span>
+																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;margin-left:10px; margin-right:10px;">																					<span class="glyphicon glyphicon-th"></span>
+																				</span>
+																				<ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-time"></span>  Reminder</a></li>
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-share"></span>  Share</a></li>
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-lock"></span> Mask</a></li>
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-inbox"></span>  Archive</a></li>
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-trash"></span>  Delete</a></li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+
+																<div class="col-md-4 col-sm-4 ">
+																	<div class="panel note-sm">
+																		<div class="panel-heading"> The one about Person <button class="close note-close"> &times;</button></div>
+																		<hr style="margin:0 0 3px;">
+																		<div class="panel-body">Set out to correct the world's wrongs, and you would almost certainly wind up adding to them</div>
+																		<div  class="panel-footer" >
+																			<div class=" pull-left" >
+																				<p>
+																					<span class="glyphicon glyphicon-time">10:30pm</span>
+																				</p>
+																			</div>
+																			<div class="dropdown pull-right">
+																				<span class="edit-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-edit" ></span></span>
+																				<span class="open-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-resize-full" ></span></span>
+																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;margin-left:10px; margin-right:10px;">																					<span class="glyphicon glyphicon-th"></span>
+																				</span>
+																				<ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-time"></span>  Reminder</a></li>
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-share"></span>  Share</a></li>
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-lock"></span> Mask</a></li>
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-inbox"></span>  Archive</a></li>
+																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-trash"></span>  Delete</a></li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+
+																<div class="col-md-4 col-sm-4 ">
+																	<div class="panel note-sm">
+																		<div class="panel-heading"> The one about Person<button class="close note-close"> &times;</button> </div>
+																		<hr style="margin:0 0 3px;">
+																		<div class="panel-body">Set out to correct the world's wrongs, and you would almost certainly wind up adding to them</div>
+																		<div  class="panel-footer" >
+																			<div class=" pull-left" >
+																				<p>
+																					<span class="glyphicon glyphicon-time">10:30pm</span>
+																				</p>
+																			</div>
+																			<div class="dropdown pull-right">
+																				<span class="edit-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-edit" ></span></span>
+																				<span class="open-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-resize-full" ></span></span>
 																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;">
 																					<span class="glyphicon glyphicon-th"></span>
 																				</span>
@@ -577,8 +626,9 @@
 																				</p>
 																			</div>
 																			<div class="dropdown pull-right">
-																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;">
-																					<span class="glyphicon glyphicon-th"></span>
+																				<span class="edit-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-edit" ></span></span>
+																				<span class="open-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-resize-full" ></span></span>
+																				<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;margin-left:10px; margin-right:10px;">																					<span class="glyphicon glyphicon-th"></span>
 																				</span>
 																				<ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
 																					<li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-time"></span>  Reminder</a></li>

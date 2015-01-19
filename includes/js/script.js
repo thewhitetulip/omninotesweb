@@ -24,4 +24,6 @@ $(document).ready(function(){
    $('.hashtag').click(function(){
      alert($(this).html());
    });
+
+
 });
