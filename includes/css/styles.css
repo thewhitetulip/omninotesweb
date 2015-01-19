@@ -19,6 +19,17 @@
   text-align:center;
 }
 
+.navbar-brand:hover{
+  color:white;
+}
+
+.footer{
+  height:30px;
+  width:auto;
+  text-align:center;
+
+}
+
 /*--------------------------------------
       Typography
 -------------------------------------- */
@@ -176,7 +187,9 @@
 
   }
 
-
+  .badge{
+    background-color: #7D8EF0;
+  }
 
   /* --------------------------------------
   Global Styles

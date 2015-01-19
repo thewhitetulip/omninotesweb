@@ -1,12 +1,14 @@
 .sidebar-toggle {
   position: absolute;
-  display: none;
   top: 0;
   left: 0;
   height: 51px;
   cursor: pointer;
   margin: 0;
   padding: 17px 20px 17px 0;
+}
+.sidebar-toggle .glyphicon{
+    color:white;
 }
 .sidebar-toggle > i {
   font-size: 18px;

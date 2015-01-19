@@ -28,7 +28,8 @@
 		<nav class="navbar navbar-default navbar-fixed-top mainHeader">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="">Notes</a>
+
+					<p class="navbar-brand" href=""> Notes</p>
 				</div>
 			</div>
 
@@ -40,7 +41,55 @@
 				<button class="btn btn-action glyphicon glyphicon-off"></button>
 			</div>
 		</nav>
+		<!-- SIDEBAR -->
+		<div data-sidebar="true" class="sidebar-trigger">
 
+			<a class="sidebar-toggle" href="">
+				<span class="glyphicon glyphicon-align-justify"></span>
+			</a>
+
+
+			<div class="sidebar-wrapper sidebar-default">
+				<div class="sidebar-scroller">
+					<ul class="sidebar-menu">
+						<li class="sidebar-group"><span>Omni Notes</span>
+							<ul class="sidebar-group-menu">
+								<li class="sidebar-item">
+									<a href="" class="active"><span class="glyphicon glyphicon-file"></span> <span class="nav-item">Notes</span></a>
+								</li>
+								<li class="sidebar-item">
+									<a href="" ><span class="glyphicon glyphicon-time"></span>  <span class="nav-item"> Reminders</span></a>
+								</li>
+								<li class="sidebar-item">
+									<a href="" ><span class="glyphicon glyphicon-trash"></span>  <span class="nav-item"> Trash</span></a>
+								</li>
+								<li class="sidebar-item"><a href="">
+									<span class="glyphicon glyphicon-folder-open"></span> <span class="nav-item">Uncategorized</span></a>
+								</li>
+								<hr>
+								<li class="sidebar-item">
+									<a href=""><span class="glyphicon glyphicon-stop"></span>  </span><span class="nav-item">Books<span class="badge pull-right">43</span></span></a>
+								</li>
+								<li class="sidebar-item">
+									<a href=""><span class="glyphicon glyphicon-stop"></span> </span><span class="nav-item">Diary &amp; Dreams<span class="badge pull-right" >38</span></span></a>
+								</li>
+								<li class="sidebar-item">
+									<a href=""><span class="glyphicon glyphicon-stop"></span><span class="nav-item">Startup</span><span class="badge pull-right">28</span></a>
+								</li>
+								<hr>
+								<li class="sidebar-item">
+									<a href=""><span class="glyphicon glyphicon-cog"></span> <span class="nav-item">Settings</span></a>
+								</li>
+								<li class="sidebar-item">
+									<a href="#changeLogModal"  data-toggle="modal"><span class="glyphicon glyphicon-hand-up"></span> ChangeLog</a>
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
 
 		<!--end mainHeader -->
 
@@ -54,6 +103,10 @@
 					</div>
 					<div class="modal-body">
 						<ul>
+							<h1 class="lead">19 Jan 2015</h1>
+							<li>Now you can delete note from the UI</li>
+							<li>Added badges, improved navigation drawer</li>
+
 							<h1 class="lead">18 Jan 2015</h1>
 							<li>Added changelog dialog to track changes</li>
 							<li>Added drop down menu for each note</li>
@@ -70,52 +123,7 @@
 			</div>
 		</div>
 
-		<!-- SIDEBAR -->
-		<div data-sidebar="true" class="sidebar-trigger">
 
-			<a class="sidebar-toggle" href="">
-				<span class="sr-only"> </span>
-				<span class="sr-only"> </span>
-				<span class="sr-only"> </span>
-				<!-- <i class="fa fa-sidebar-toggle"></i> -->
-			</a>
-
-			<div class="sidebar-wrapper sidebar-default">
-				<div class="sidebar-scroller">
-					<ul class="sidebar-menu">
-						<li class="sidebar-group"><span>Menu</span>
-							<ul class="sidebar-group-menu">
-								<li class="sidebar-item">
-									<a href="" class="active"><span class="glyphicon glyphicon-file"></span> <span class="nav-item">Notes</span></a>
-								</li>
-								<li class="sidebar-item">
-									<a href="" ><span class="glyphicon glyphicon-time"></span>  <span class="nav-item"> Reminders</span></a>
-								</li>
-								<li class="sidebar-item"><a href="">
-									<span class="glyphicon glyphicon-folder-open"></span> <span class="nav-item">Uncategorized</span></a>
-								</li>
-								<li class="sidebar-item">
-									<a href=""><span class="glyphicon glyphicon-stop"></span>  </span><span class="nav-item">Books</span></a>
-									</li>
-								<li class="sidebar-item">
-									<a href=""><span class="glyphicon glyphicon-stop"></span> </span><span class="nav-item">Diary &amp; Dreams</span></a>
-									</li>
-								<li class="sidebar-item">
-									<a href=""><span class="glyphicon glyphicon-stop"></span><span class="nav-item">Startup</span></a>
-								</li>
-								<li class="sidebar-item">
-									<a href=""><span class="glyphicon glyphicon-cog"></span> <span class="nav-item">Settings</span></a>
-								</li>
-								<li class="sidebar-item">
-									<a href="#changeLogModal"  data-toggle="modal"><span class="glyphicon glyphicon-hand-up"></span> ChangeLog</a>
-								</li>
-							</ul>
-						</li>
-
-					</ul>
-				</div>
-			</div>
-		</div>
 
 	<div id="main" class="container-fluid">
 
@@ -125,7 +133,7 @@
 
 																<!-- <div class="col-md-4 col-sm-4 ">
 																	<div class="panel note-lg ">
-																		<div class="panel-heading"> Create history<button class="close"> &times;</button></div>
+																		<div class="panel-heading"> Create history<button class="close note-close"> &times;</button></div>
 																		<hr style="margin:0 0 3px;">
 																		<div class="panel-body">Don't be afraid to ask questions, history is made by the people who asked questions. Millions said the apple fell down, newton was the first one to ask WHY.
 																			<br><br>Don't be afraid to ask questions, history is made by the people who asked questions. Millions said the apple fell down, newton was the first one to ask WHY.
@@ -135,7 +143,7 @@
 
 																	<div class="col-md-4 col-sm-4 ">
 																		<div class="panel note-sm">
-																			<div class="panel-heading" > Change the world<button class="close" id="note-delete"> &times;</button></div>
+																			<div class="panel-heading" > Change the world<button class="close note-close" id="note-delete"> &times;</button></div>
 																			<hr style="margin:0 0 3px;">
 																			<div class="panel-body">Winter is coming.</div>
 																			<div  class="panel-footer" >
@@ -164,7 +172,7 @@
 
 																<!-- <div class="col-md-4 col-sm-4 ">
 																	<div class="panel note-md">
-																		<div class="panel-heading"> UI<button class="close"> &times;</button></div>
+																		<div class="panel-heading"> UI<button class="close note-close"> &times;</button></div>
 																		<hr style="margin:0 0 3px;">
 																		<div class="panel-body"> UIs are like  jokes, not good enough if you have to explain it.
 																			UIs are like  jokes, not good enough if you have to explain it
@@ -176,7 +184,7 @@
 
 																<div class="col-md-4 col-sm-4 ">
 																	<div class="panel note-sm">
-																		<div class="panel-heading"> Revolutions<button class="close"> &times;</button></div>
+																		<div class="panel-heading"> Revolutions<button class="close note-close"> &times;</button></div>
 																		<hr style="margin:0 0 3px;">
 																		<div class="panel-body">There is no such thing as revolution, they are just misquoted evolution</div>
 																		<div  class="panel-footer" >
@@ -203,7 +211,7 @@
 
 																<div class="col-md-4 col-sm-4 ">
 																	<div class="panel note-sm">
-																		<div class="panel-heading"> Inspirational<button class="close"> &times;</button></div>
+																		<div class="panel-heading"> Inspirational<button class="close note-close"> &times;</button></div>
 																		<hr style="margin:0 0 3px;">
 																		<div class="panel-body">Don't practice until you get it right.  Practice until you can't get it wrong</div>
 																		<div  class="panel-footer" >
@@ -230,7 +238,7 @@
 
 																<div class="col-md-4 col-sm-4 ">
 																	<div class="panel note-sm">
-																		<div class="panel-heading"> Quote<button class="close"> &times;</button></div>
+																		<div class="panel-heading"> Quote<button class="close note-close"> &times;</button></div>
 																		<hr style="margin:0 0 3px;">
 																		<div class="panel-body">The fool didn't know it was impossible, so he did it.</div>
 																		<div  class="panel-footer" >
@@ -256,7 +264,7 @@
 																</div>
 																<div class="col-md-4 col-sm-4 ">
 																	<div class="panel note-sm">
-																		<div class="panel-heading"> The one about root<button class="close"> &times;</button></div>
+																		<div class="panel-heading"> The one about root<button class="close note-close"> &times;</button></div>
 																		<hr style="margin:0 0 3px;">
 																		<div class="panel-body">We're just an accident,  Harold. We're just bad code.</div>
 																		<div  class="panel-footer" >
@@ -282,7 +290,7 @@
 																</div>
 																<div class="col-md-4 col-sm-4 ">
 																	<div class="panel note-sm">
-																		<div class="panel-heading"> the one about flying<button class="close"> &times;</button></div>
+																		<div class="panel-heading"> the one about flying<button class="close note-close"> &times;</button></div>
 																		<hr style="margin:0 0 3px;">
 																		<div class="panel-body">I always wonder why birds stay in thr same place when they can fly anywhere on earth</div>
 																		<div  class="panel-footer" >
@@ -308,7 +316,7 @@
 																</div>
 																<div class="col-md-4 col-sm-4 ">
 																	<div class="panel note-sm">
-																		<div class="panel-heading"> the one about success <button class="close" id="note-delete"> &times;</button></div>
+																		<div class="panel-heading"> the one about success <button class="close note-close" id="note-delete"> &times;</button></div>
 																		<hr style="margin:0 0 3px;">
 																		<div class="panel-body">When you want to succeed as badly as you want to breath, you'll be successful.</div>
 																		<div  class="panel-footer" >
@@ -334,14 +342,14 @@
 																</div>
 																<!-- <div class="col-md-4 col-sm-4 ">
 																	<div class="panel note-md">
-																		<div class="panel-heading"> Quote<button class="close"> &times;</button></div>
+																		<div class="panel-heading"> Quote<button class="close note-close"> &times;</button></div>
 																		<hr style="margin:0 0 3px;">
 																		<div class="panel-body">"The moment you realize that everything in the world around you was built by people who were no smarter than you, you become an element of change yourself...you can change anything"</div>
 																	</div>
 																</div>
 																<div class="col-md-4 col-sm-4 ">
 																	<div class="panel note-md">
-																		<div class="panel-heading"> productivity hack<button class="close"> &times;</button></div>
+																		<div class="panel-heading"> productivity hack<button class="close note-close"> &times;</button></div>
 																		<hr style="margin:0 0 3px;">
 																		<div class="panel-body">
 																			<ol>
@@ -354,7 +362,7 @@
 																</div> -->
 																<div class="col-md-4 col-sm-4 ">
 																	<div class="panel note-sm">
-																		<div class="panel-heading"> The one about Fringe<button class="close"> &times;</button></div>
+																		<div class="panel-heading"> The one about Fringe<button class="close note-close"> &times;</button></div>
 																		<hr style="margin:0 0 3px;">
 																		<div class="panel-body">Some much happened here, so much is about to.</div>
 																		<div  class="panel-footer" >
@@ -380,7 +388,7 @@
 																</div>
 																<div class="col-md-4 col-sm-4 ">
 																	<div class="panel note-sm">
-																		<div class="panel-heading"> The one about Person<button class="close"> &times;</button> </div>
+																		<div class="panel-heading"> The one about Person<button class="close note-close"> &times;</button> </div>
 																		<hr style="margin:0 0 3px;">
 																		<div class="panel-body">Set out to correct the world's wrongs, and you would almost certainly wind up adding to them</div>
 																		<div  class="panel-footer" >
@@ -407,7 +415,7 @@
 
 																<div class="col-md-4 col-sm-4 ">
 																	<div class="panel note-sm">
-																		<div class="panel-heading"> The one about Person<button class="close"> &times;</button> </div>
+																		<div class="panel-heading"> The one about Person<button class="close note-close"> &times;</button> </div>
 																		<hr style="margin:0 0 3px;">
 																		<div class="panel-body">Set out to correct the world's wrongs, and you would almost certainly wind up adding to them</div>
 																		<div  class="panel-footer" >
@@ -434,7 +442,7 @@
 
 																<div class="col-md-4 col-sm-4 ">
 																	<div class="panel note-sm">
-																		<div class="panel-heading"> The one about Person <button class="close"> &times;</button></div>
+																		<div class="panel-heading"> The one about Person <button class="close note-close"> &times;</button></div>
 																		<hr style="margin:0 0 3px;">
 																		<div class="panel-body">Set out to correct the world's wrongs, and you would almost certainly wind up adding to them</div>
 																		<div  class="panel-footer" >
@@ -461,7 +469,7 @@
 
 																<div class="col-md-4 col-sm-4 ">
 																	<div class="panel note-sm">
-																		<div class="panel-heading"> The one about Person <button class="close"> &times;</button></div>
+																		<div class="panel-heading"> The one about Person <button class="close note-close"> &times;</button></div>
 																		<hr style="margin:0 0 3px;">
 																		<div class="panel-body">Set out to correct the world's wrongs, and you would almost certainly wind up adding to them</div>
 																		<div  class="panel-footer" >
@@ -488,7 +496,7 @@
 
 																<div class="col-md-4 col-sm-4 ">
 																	<div class="panel note-sm">
-																		<div class="panel-heading"> The one about Person <button class="close"> &times;</button></div>
+																		<div class="panel-heading"> The one about Person <button class="close note-close"> &times;</button></div>
 																		<hr style="margin:0 0 3px;">
 																		<div class="panel-body">Set out to correct the world's wrongs, and you would almost certainly wind up adding to them</div>
 																		<div  class="panel-footer" >
@@ -515,7 +523,7 @@
 
 																<div class="col-md-4 col-sm-4 ">
 																	<div class="panel note-sm">
-																		<div class="panel-heading"> The one about Person<button class="close"> &times;</button> </div>
+																		<div class="panel-heading"> The one about Person<button class="close note-close"> &times;</button> </div>
 																		<hr style="margin:0 0 3px;">
 																		<div class="panel-body">Set out to correct the world's wrongs, and you would almost certainly wind up adding to them</div>
 																		<div  class="panel-footer" >
@@ -542,7 +550,7 @@
 
 																<div class="col-md-4 col-sm-4 ">
 																	<div class="panel note-sm">
-																		<div class="panel-heading"> The one about Person <button class="close"> &times;</button></div>
+																		<div class="panel-heading"> The one about Person <button class="close note-close"> &times;</button></div>
 																		<hr style="margin:0 0 3px;">
 																		<div class="panel-body">Set out to correct the world's wrongs, and you would almost certainly wind up adding to them</div>
 																		<div  class="panel-footer" >
@@ -571,9 +579,9 @@
 											</div>
 								</div>
 
-		</div>
-
-
+<footer class="footer" >
+	Made in India with <span class="glyphicon glyphicon-heart"></span> by <a href="htp://github.com/thewhitetulip">@thewhitetulip</a>
+</footer>
 	<!-- All Javascript at the bottom of the page for faster page loading -->
 
 
