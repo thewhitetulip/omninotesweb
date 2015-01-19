@@ -33,7 +33,14 @@
 /*--------------------------------------
       Typography
 -------------------------------------- */
+.hashtag{
+  color: #3344A5;
+}
 
+.hashtag:hover{
+  cursor:pointer;
+  text-decoration: underline;
+}
 
 /*--------------------------------------
       Navbar

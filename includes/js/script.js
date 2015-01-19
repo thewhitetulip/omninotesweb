@@ -14,6 +14,14 @@ $(document).ready(function(){
      var note = $(this).parent().parent().parent();
      note.fadeOut('slow');
      note.remove();
+   });
 
+   $('#edit-note').click(function(){
+
+
+   });
+
+   $('.hashtag').click(function(){
+     alert($(this).html());
    });
 });
