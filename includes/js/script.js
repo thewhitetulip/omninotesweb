@@ -16,9 +16,19 @@ $(document).ready(function(){
      note.remove();
    });
 
-   $('#edit-note').click(function(){
+   $('.open-note').click(function(){
+     var element = $(this);
+     var cont=element.parent().parent().siblings().contents().toArray();
+     var note_body =cont[2].data;
+     console.log(note_body);
+     var note_title = cont[0].data;
+     console.log(note_title);
 
 
+     var ONmodal = $('#openNoteModal');
+     ONmodal.find('.modal-title').text(note_title);
+     ONmodal.find('.modal-body').text(note_body);
+     ONmodal.modal('show');
    });
 
    $('.hashtag').click(function(){

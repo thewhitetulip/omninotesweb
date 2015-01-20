@@ -105,12 +105,12 @@
 					<div class="modal-body">
 						<form>
 							<div class="form-group">
-    <!-- <label for="note-title" class="control-label">Title:</label> -->
-    <input type="text" class="form-control" id="note-title" placeholder="Title" style="border:none;border-bottom:1px solid gray; box-shadow:none;">
+                <!-- <label for="note-title" class="control-label">Title:</label> -->
+                <input type="text" class="form-control" id="note-title" placeholder="Title" style="border:none;border-bottom:1px solid gray; box-shadow:none;">
 							</div>
 							<div class="form-group">
-    <!-- <label for="note-content" class="control-label">Content:</label> -->
-    <textarea class="form-control" id="note-content" placeholder="Content" rows="20" style="border:none;border-bottom:1px solid gray; box-shadow:none;"></textarea>
+                 <!-- <label for="note-content" class="control-label">Content:</label> -->
+                <textarea class="form-control" id="note-content" placeholder="Content" rows="20" style="border:none;border-bottom:1px solid gray; box-shadow:none;"></textarea>
 							</div>
 						</form>
 					</div>
@@ -132,10 +132,13 @@
 					</div>
 					<div class="modal-body">
 						<ul>
+							<h1 class="lead">20 Jan 2015</h1>
+							<li>Notes open dynamically</li>
+
 							<h1 class="lead">19 Jan 2015</h1>
 							<li>Now you can delete note from the UI</li>
 							<li>Added badges, improved navigation drawer and hashtags</li>
-							<li>Notes now open in a modal</li>
+							<li>open note modal added</li>
 							<li>Add note modal added, yet to add actual notes in the page</li>
 
 							<h1 class="lead">18 Jan 2015</h1>
@@ -154,8 +157,8 @@
 			</div>
 		</div>
 
-		<!-- modal for change log -->
-		<div class="modal fade" id="openNoteModal">
+		<!-- modal for opening note -->
+		<div class="modal fade" id="openNoteModal" tabindex="-1" role="dialog" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -198,9 +201,9 @@
         	    </div>
         				<div class="dropdown pull-right">
         					<span class="edit-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-edit" ></span></span>
-        					<span class="open-note" href="#openNoteModal"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-resize-full" ></span></span>
+        					<span class="open-note"  data-toggle="modal" style="text-decoration:none;cursor:pointer; margin-left:10px; margin-right:10px;"> <span class="glyphicon glyphicon-resize-full" ></span></span>
         					<span class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="text-decoration:none;cursor:pointer;margin-left:10px; margin-right:10px;">
-     <span class="glyphicon glyphicon-th"></span>
+                  <span class="glyphicon glyphicon-th"></span>
         					</span>
         					<ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
      <li role="presentation"><a role="menuitem" tabindex="-1" href=""><span class="glyphicon glyphicon-time"></span>  Reminder</a></li>
@@ -612,7 +615,7 @@
  	</div>
  </div>
 
- <div class="col-md-4 col-sm-4 ">
+<div class="col-md-4 col-sm-4 ">
  	<div class="panel note-sm">
         <div class="panel-heading"> The one about Person <button class="close note-close"> &times;</button></div>
         <hr style="margin:0 0 3px;">
