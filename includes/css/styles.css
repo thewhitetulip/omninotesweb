@@ -29,7 +29,9 @@
   text-align:center;
 
 }
-
+textarea {
+  resize: vertical;
+}
 /*--------------------------------------
       Typography
 -------------------------------------- */
