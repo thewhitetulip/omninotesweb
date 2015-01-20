@@ -55,7 +55,7 @@
 
   .navbar-brand{
     margin-left: 25px;
-   font-size:25px;
+   font-size:1.5em;
    color:white;
 
   }
@@ -66,7 +66,9 @@
 
   #icons{
   text-align:right;
-  padding-top:17px;
+  line-height:52px;
+  height:52px;
+
   }
 
   nav .glyphicon{
@@ -124,10 +126,13 @@
   }
 
   .panel{
+    /*
     box-shadow:0px 1px 0px #CFCFCF;
     border-radius:0 0 4px 4px;
-
+  */
+    border-radius:0 0 0px 0px;
   }
+
   .panel .btn i,.btn span{
     color:#666666;
   }
@@ -150,7 +155,9 @@
   }
 
 
-
+#notesFeed .panel-footer{
+    color:#aaa;
+}
 /*--------------------------------------
     Navigation drawer
 -------------------------------------- */
@@ -265,3 +272,10 @@
   /* Large desktop */
   @media (min-width: 1200px) {
   }
+/*--------------------------------------
+      Sidebar
+-------------------------------------- */
+.sidebar-toggle{
+
+  left:10px !important;
+}
