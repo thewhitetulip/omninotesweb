@@ -38,11 +38,14 @@ textarea {
   bottom:40px;
   right:30px;
   z-index:101;
-  width: 70px;
-  height: 70px;
-  padding: 10px 16px;
-  font-size: 24px;
+  width: 56px;
+  height: 56px;
+  font-size: 20px;
   border-radius: 35px;
+  box-shadow:0 0 4px #111;
+  padding-top:10px !important;
+
+
 }
 /*--------------------------------------
 Typography
@@ -170,6 +173,7 @@ NotesFeed
   box-shadow:0px 1px 0px #CFCFCF;
   border-radius:0 0 4px 4px;
   */
+  
   border-radius:0 0 0px 0px;
 }
 
@@ -179,11 +183,12 @@ NotesFeed
 
 .panel .panel-heading {
   background-color:#ffffff;
-  font-weight:700;
-  font-size:16px;
+  font-weight:500;
+  font-size:18px;
   color:#262626;
   border-color:#ffffff;
   margin-bottom:0px;
+  padding-bottom:5px;
 
 }
 .panel .panel-heading a {
@@ -194,7 +199,10 @@ NotesFeed
   border-color:#cccccc;
 }
 
+.panel .panel-body {
 
+  margin-top:5px;
+}
 #notesFeed .panel-footer{
   color:#aaa;
 }
