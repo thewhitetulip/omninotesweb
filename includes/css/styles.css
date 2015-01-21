@@ -173,7 +173,7 @@ NotesFeed
   box-shadow:0px 1px 0px #CFCFCF;
   border-radius:0 0 4px 4px;
   */
-  
+
   border-radius:0 0 0px 0px;
 }
 
@@ -183,9 +183,9 @@ NotesFeed
 
 .panel .panel-heading {
   background-color:#ffffff;
-  font-weight:500;
-  font-size:18px;
-  color:#262626;
+  font-weight:700;
+  font-size:15px;
+  color:#666666;
   border-color:#ffffff;
   margin-bottom:0px;
   padding-bottom:5px;
@@ -202,10 +202,16 @@ NotesFeed
 .panel .panel-body {
 
   margin-top:5px;
+  font-size: 0.9em;
 }
 #notesFeed .panel-footer{
   color:#aaa;
 }
+.notes-container {
+
+  padding:30px;
+}
+
 /*--------------------------------------
 Navigation drawer
 -------------------------------------- */
