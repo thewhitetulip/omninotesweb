@@ -344,12 +344,12 @@ Sidebar
 
 /*Modal dialog*/
 
-.modal-footer{
+.modal-footer {
   padding: 10px 15px 15px;
   margin:0;
   border:none;
 }
 
 .modal-body{
-  padding: 20px 20px 0px 20px;
+  padding: 20px 20px 10px 20px;
 }
