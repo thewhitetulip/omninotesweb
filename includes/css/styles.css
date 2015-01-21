@@ -37,7 +37,7 @@ textarea {
   position: fixed;
   bottom:40px;
   right:30px;
-  z-index:10001;
+  z-index:101;
   width: 70px;
   height: 70px;
   padding: 10px 16px;
@@ -278,6 +278,24 @@ Media Queries
     height:150px;
   }
 
+  .floating-action-icon{
+    position: fixed;
+    bottom:35px;
+    right:20px;
+    z-index:101;
+    width: 50px;
+    height: 50px;
+    padding: 10px 10px;
+    font-size: 24px;
+    border-radius: 25px;
+    text-align:center;
+  }
+
+  .modal-dialog{
+    width:240px;
+  }
+
+
 }
 
 
@@ -302,12 +320,16 @@ Media Queries
     height:360px;
     /*change later*/
   }
+  .modal-dialog{
+    width:250px;
+  }
 
 }
 
 
 /* Large desktop */
 @media (min-width: 1200px) {
+
 }
 
 /*--------------------------------------
@@ -318,4 +340,16 @@ Sidebar
 }
 .sidebar-wrapper.sidebar-default.sidebar-open, .sidebar-wrapper.sidebar-default.sidebar-dragging{
   width:260px;
+}
+
+/*Modal dialog*/
+
+.modal-footer{
+  padding: 10px 15px 15px;
+  margin:0;
+  border:none;
+}
+
+.modal-body{
+  padding: 20px 20px 0px 20px;
 }
