@@ -34,7 +34,7 @@
 			</div>
 
 			<div  id="icons">
-				<button class="btn btn-action glyphicon glyphicon-plus" id="addNote" type="button" class="btn btn-primary" data-toggle="modal" href="#addNoteModal"></button>
+				<button data-placement="bottom" data-toggle="tooltip" title="New note" class="btn btn-action glyphicon glyphicon-plus" id="addNote" type="button" class="btn btn-primary" data-toggle="modal"></button>
 				<button class="btn btn-action glyphicon glyphicon-search "></button>
 				<button class="btn btn-action glyphicon glyphicon-sort"></button>
 				<button class="btn btn-action glyphicon glyphicon-refresh"></button>
@@ -67,7 +67,10 @@
     <li class="sidebar-item"><a href="">
     	<span class="glyphicon glyphicon-folder-open"></span> <span class="nav-item">Uncategorized</span></a>
     </li>
-    <hr>
+		<li class="sidebar-item">
+			<h5>Categories <button title="New category" data-placement="left" data-toggle="tooltip" class="btn glyphicon glyphicon-plus" style="font-size:small; margin-left:120px;"></button></h5>
+		</li>
+
     <li class="sidebar-item">
     	<a href=""><span class="glyphicon glyphicon-stop"></span>  </span><span class="nav-item">Books<span class="badge pull-right">43</span></span></a>
     </li>
@@ -93,7 +96,7 @@
 		</div>
 
 		<!--end mainHeader -->
-
+		<button class=" btn-danger btn glyphicon glyphicon-plus floating-action-icon"></button>
 		<!-- Add note modal -->
 		<div class="modal fade " id="addNoteModal" tabindex="-1" role="dialog" aria-labelledby="newNoteLabel" aria-hidden="true">
 			<div class="modal-dialog">
