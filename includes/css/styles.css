@@ -158,6 +158,11 @@ NotesFeed
     
 
 }
+hr{
+    margin: 0;
+    padding: 0;
+
+}
 
 .noteHeading a {
   font-weight:400;
@@ -171,10 +176,19 @@ NotesFeed
 }
 
 .noteContent {
-    border-top: 1px solid #D8D4D4;
     padding-top: 7px;
     font-size: 0.9em;
 }
+
+/*
+.categoryTick{
+    display: block;
+    float: right;
+    width: 10px;
+    height: 25px;
+    background-color: aquamarine;
+}
+*/
 
 .notefooter{
   color:#aaa;
