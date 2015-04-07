@@ -135,9 +135,10 @@ nav  .glyphicon:hover{
   display:none;
 }
 
-.panel-footer{
-  background-color: white;
-  border-top:0px;
+.dropdown-menu{
+  margin-top:-18px;
+  margin-right:18px;
+  min-width:100px;
 }
 
 .dropdown-menu{
@@ -148,70 +149,66 @@ nav  .glyphicon:hover{
 /*--------------------------------------
 NotesFeed
 -------------------------------------- */
-.note-lg{
-  height:360px;
-}
-
-.note-md{
-  height:240px;
-}
-
-.note-sm{
-  height:140px;
-}
-
-.note-sm .panel-body{
-  height:100px;
-}
-
-.note-sm .panel-body{
-  height:40px;
-}
-
-.panel{
-  /*
-  box-shadow:0px 1px 0px #CFCFCF;
-  border-radius:0 0 4px 4px;
-  */
-
-  border-radius:0 0 0px 0px;
-}
-
-.panel .btn i,.btn span{
-  color:#666666;
-}
-
-.panel .panel-heading {
-  background-color:#ffffff;
-  font-weight:700;
-  font-size:15px;
-  color:#666666;
-  border-color:#ffffff;
-  margin-bottom:0px;
-  padding-bottom:5px;
+.noteHeading { 
+    font-weight:700;
+    font-size:15px;
+    color:#666666;
+    margin-bottom:0px;
+    padding-bottom:5px;
+    
 
 }
-.panel .panel-heading a {
+
+.noteHeading a {
   font-weight:400;
   font-size:11px;
 }
-.panel .panel-default {
-  border-color:#cccccc;
+
+.notes-container{
+    max-width: 1200px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-.panel .panel-body {
-
-  margin-top:5px;
-  font-size: 0.9em;
+.noteContent {
+    border-top: 1px solid #D8D4D4;
+    padding-top: 7px;
+    font-size: 0.9em;
 }
-#notesFeed .panel-footer{
+
+.notefooter{
   color:#aaa;
 }
-.notes-container {
 
-  padding:30px;
+#grid[data-columns]::before {
+	content: '4 .column.size-1of4';
 }
 
+/* These are the classes that are going to be applied: */
+.column { 
+    float: left; 
+}
+
+.note{
+    display: block;
+    margin: 4px;
+    padding: 15px;
+    background-color: white;
+    box-shadow:1px 2px 3px 1px #CFCFCF;
+    border-radius:4px 4px 4px 4px;
+}
+
+.size-1of3 { width: 33.333%; }
+.size-1of4 { width: 25%; }
+.size-1of2 { width: 50%; }
+
+.timeline {
+    overflow: hidden;
+}
+
+.timeline[data-columns]::before {
+    content: "4 .column.size-1of4";
+}
 /*--------------------------------------
 Navigation drawer
 -------------------------------------- */
@@ -308,13 +305,17 @@ Media Queries
   .modal-dialog{
     width:240px;
   }
+    
+    .timeline[data-columns]::before {
+    content: "2 .column.size-1of2";
+}
 
 
 }
 
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width:481px) {
   #icons{
     text-align:center;
     padding:0;
@@ -323,7 +324,9 @@ Media Queries
   body{
     margin-top:105px;
   }
-
+.timeline[data-columns]::before {
+    content: "3 .column.size-1of3";
+}
 
   .mainHeader h3{
     padding:0px;
@@ -342,7 +345,7 @@ Media Queries
 
 
 /* Large desktop */
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (min-width:769) {
 
 }
 
