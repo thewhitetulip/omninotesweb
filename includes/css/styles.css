@@ -207,6 +207,7 @@ hr{
 .note{
     display: block;
     margin: 4px;
+    margin-bottom: 6px;
     padding: 15px;
     background-color: white;
     box-shadow:1px 1px 2px 1px #7D7470;
@@ -223,6 +224,7 @@ hr{
 .size-1of3 { width: 33.333%; }
 .size-1of4 { width: 25%; }
 .size-1of2 { width: 50%; }
+.size-1of1 {width: 100%;}
 
 .timeline {
     overflow: hidden;
@@ -295,6 +297,10 @@ Media Queries
   body{
     margin-top:105px;
   }
+    
+.notes-container{
+    margin: 0px;
+}
 
   #icons{
     text-align:center;
@@ -329,7 +335,7 @@ Media Queries
   }
     
     .timeline[data-columns]::before {
-    content: "2 .column.size-1of2";
+    content: "1 .column.size-1of1";
 }
 
 
