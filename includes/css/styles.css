@@ -170,9 +170,10 @@ hr{
 }
 
 .notes-container{
-    max-width: 1200px;
+    
     margin-left: 50px;
     margin-right: 50px;
+    padding: 15px;
 }
 
 .noteContent {
@@ -208,8 +209,15 @@ hr{
     margin: 4px;
     padding: 15px;
     background-color: white;
-    box-shadow:1px 2px 3px 1px #CFCFCF;
+    box-shadow:1px 1px 2px 1px #7D7470;
     border-radius:4px 4px 4px 4px;
+    
+}
+
+.note:hover{
+    
+    border-bottom: 2px solid black;
+    cursor: pointer;
 }
 
 .size-1of3 { width: 33.333%; }
