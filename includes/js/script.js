@@ -13,6 +13,10 @@ $(document).ready(function(){
   /*on() is used instead of click because click can be used only on static elements, and on() is to be used when you add
   elements dynamically*/
   $('[data-toggle="tooltip"]').tooltip();
+//    
+//    $('.items').openOnHover(function(){
+//        alert();
+//    });
 
   $('#addNote').click(function(){
     $('#addNoteModal').modal('show');
